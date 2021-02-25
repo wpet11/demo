@@ -1,0 +1,26 @@
+server:
+  port: 10020
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  datasource:
+    test:
+      url: jdbc:mysql://106.15.67.50:3306/test?useSSL=false&useUnicode=true&characterEncoding=UTF-8
+      driver-class-name: com.mysql.jdbc.Driver
+      username: root
+      password: root
+      hikari:
+        minimum-idle: 10
+        maximum-pool-size: 10
+    user:
+      url: jdbc:mysql://106.15.67.50:3306/user?useSSL=false&useUnicode=true&characterEncoding=UTF-8
+      driver-class-name: com.mysql.jdbc.Driver
+      username: root
+      password: root
+      hikari:
+        minimum-idle: 10
+        maximum-pool-size: 10
+mybatis:
+  mapper-locations: classpath:com.robin.test.demo/*.xml # 配置 Mapper XML 地址
+  type-handlers-package: com.robin.test.demo.config
+api_elastic_search_company_info: http://qa.risk.chinascope.net/es/company?keyword={keyword}&page={page}&size={size}

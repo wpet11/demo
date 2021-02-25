@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.robin.test.demo.dao.StudentMapper">
+
+    <insert id="addStudent" parameterType="com.robin.test.demo.entiry.Student">
+        insert into student(
+        name,age,type
+        )
+        value (#{name},#{age},#{type})
+    </insert>
+
+    <select id="queryById" resultType="com.robin.test.demo.entiry.Student">
+        select *
+        from student
+        where id = #{id}
+    </select>
+
+</mapper>
